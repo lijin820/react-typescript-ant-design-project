@@ -1,8 +1,15 @@
-import React from "react";
+import React, { ReactElement } from "react";
+import { Button } from "antd";
+import { PlusOutlined } from "@ant-design/icons";
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-function ActivityTab() {
-  return <div className="Layout">Content</div>;
+function ActivityTab(): ReactElement {
+  return (
+    <div className="Layout">
+      <Button type="primary" icon={<PlusOutlined />}>
+        Add new activity
+      </Button>
+    </div>
+  );
 }
 
 export default ActivityTab;
