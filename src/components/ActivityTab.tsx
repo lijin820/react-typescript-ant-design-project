@@ -1,9 +1,8 @@
-import React from 'react';
+import React from "react";
 
-export function ActivityTab() {
-  return (
-    <div className="Layout">
-      Content      
-    </div>
-  );
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+function ActivityTab() {
+  return <div className="Layout">Content</div>;
 }
+
+export default ActivityTab;

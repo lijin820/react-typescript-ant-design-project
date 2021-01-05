@@ -6,7 +6,7 @@ import {
   UserOutlined
 } from '@ant-design/icons';
 
-import { ActivityTab } from './components/ActivityTab';
+import ActivityTab from './components/ActivityTab';
 import './App.css';
 
 const { Header, Sider, Content } = Layout;
