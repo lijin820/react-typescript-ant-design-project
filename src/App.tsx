@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, Tabs } from 'antd';
 import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
+  UserOutlined
 } from '@ant-design/icons';
+
+import { ActivityTab } from './components/ActivityTab';
 import './App.css';
 
 const { Header, Sider, Content } = Layout;
+const { TabPane } = Tabs;
 
 function App() {
   const [collapsed, setCollapsed] = useState(false);
@@ -17,6 +18,10 @@ function App() {
   const toggleSidebar = () => {
     setCollapsed(!collapsed);
   };
+
+  const callback = (key: any) => {
+    console.log(key);
+  }
 
   return (
     <Layout className="App">
@@ -43,7 +48,17 @@ function App() {
               minHeight: 280,
             }}
           >
-            Content
+            <Tabs defaultActiveKey="1" onChange={callback}>
+              <TabPane tab="Activity Feed" key="1">
+                <ActivityTab />
+              </TabPane>
+              <TabPane tab="Status" key="2">
+                Data not available
+              </TabPane>
+              <TabPane tab="Document" key="3">
+                Data not available
+              </TabPane>
+            </Tabs>
           </Content>
         </Layout>
       </Layout>
