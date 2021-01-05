@@ -1,11 +1,15 @@
 import React, { ReactElement, useState } from "react";
+import { useDispatch } from "react-redux";
 import { Input, Modal, Select, Space } from "antd";
 import { ModalType, SelectType } from "../types";
+import { ADD_ACTIVITY_REQUEST } from "../redux/constants";
 
 const { Option } = Select;
 const { TextArea } = Input;
 
 function AddActivityModal({ visible, setVisble }: ModalType): ReactElement {
+  const dispatch = useDispatch();
+
   const [type, setType] = useState<string>("note");
   const [url, setUrl] = useState<string>();
   const [note, setNote] = useState<string>();
@@ -15,8 +19,8 @@ function AddActivityModal({ visible, setVisble }: ModalType): ReactElement {
   };
 
   const submitValues = () => {
-    // eslint-disable-next-line no-console
-    console.log(type, url, note);
+    dispatch({ type: ADD_ACTIVITY_REQUEST, payload: { type, url, note } });
+    setVisble(false);
   };
 
   return (
