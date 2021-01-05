@@ -10,7 +10,10 @@ function ActivityList({ activities }: ListType): ReactElement {
       dataSource={activities}
       renderItem={(item) => (
         <List.Item>
-          <Typography.Text mark>[ITEM]</Typography.Text> {item.type}
+          <Typography.Text strong>
+            You&apos;ve created a {item.type}:
+          </Typography.Text>
+          {item.url} {item.note}
         </List.Item>
       )}
     />
