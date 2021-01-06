@@ -35,6 +35,7 @@ function AddActivityModal({ visible, setVisible }: ModalType): ReactElement {
     >
       <Space direction="vertical" size="large" style={{ width: "100%" }}>
         <Select
+          data-id="select-type"
           labelInValue
           defaultValue={{ value: "note", label: "Add Note", key: "note" }}
           style={{ width: 150 }}
@@ -45,6 +46,7 @@ function AddActivityModal({ visible, setVisible }: ModalType): ReactElement {
           <Option value="task">Add Task</Option>
         </Select>
         <Input
+          data-id="property-input"
           placeholder="Add Property URL (optional)"
           style={{ width: 300 }}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
@@ -52,6 +54,7 @@ function AddActivityModal({ visible, setVisible }: ModalType): ReactElement {
           }
         />
         <TextArea
+          data-id="note-input"
           rows={4}
           placeholder="Add notes..."
           style={{ width: "100%", resize: "none" }}

@@ -25,6 +25,7 @@ exports[`AddActivityModal rendering renders the component 1`] = `
     }
   >
     <ForwardRef(InternalSelect)
+      data-id="select-type"
       defaultValue={
         Object {
           "key": "note",
@@ -57,6 +58,7 @@ exports[`AddActivityModal rendering renders the component 1`] = `
       </Option>
     </ForwardRef(InternalSelect)>
     <Input
+      data-id="property-input"
       onChange={[Function]}
       placeholder="Add Property URL (optional)"
       style={
@@ -67,6 +69,7 @@ exports[`AddActivityModal rendering renders the component 1`] = `
       type="text"
     />
     <ForwardRef
+      data-id="note-input"
       onChange={[Function]}
       placeholder="Add notes..."
       rows={4}

@@ -9,14 +9,16 @@ function ActivityList({ activities }: ListType): ReactElement {
       style={{ marginTop: 20 }}
       bordered
       dataSource={activities}
-      renderItem={(item) => (
-        <List.Item data-id="list-item">
-          <Typography.Text strong>
-            You&apos;ve created a {item.type}:
-          </Typography.Text>
-          {item.url} {item.note}
-        </List.Item>
-      )}
+      renderItem={(item) => {
+        return (
+          <List.Item data-id="list-item">
+            <Typography.Text strong>
+              You&apos;ve created a {item.type}:
+            </Typography.Text>
+            {item.url} {item.note}
+          </List.Item>
+        );
+      }}
     />
   );
 }
