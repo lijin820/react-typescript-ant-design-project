@@ -20,13 +20,18 @@ function ActivityTab(): ReactElement {
   return (
     <div>
       <Button
+        data-id="add-button"
         type="primary"
         icon={<PlusOutlined />}
         onClick={() => setModalVisible(true)}
       >
         Add new activity
       </Button>
-      <AddActivityModal visible={modalVisible} setVisible={setModalVisible} />
+      <AddActivityModal
+        data-id="add-activity-modal"
+        visible={modalVisible}
+        setVisible={setModalVisible}
+      />
       <ActivityList activities={activities} />
     </div>
   );

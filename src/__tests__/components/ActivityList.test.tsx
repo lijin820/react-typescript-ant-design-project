@@ -1,34 +1,34 @@
 import React from "react";
 import { shallow, ShallowWrapper } from "enzyme";
-import { Provider } from "react-redux";
-import configureStore from "redux-mock-store";
 import ActivityList from "../../components/ActivityList";
 import { ActivityType } from "../../types";
 
-describe("ActivityList", () => {
-  const initialState = { activities: [] };
-  const mockStore = configureStore();
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  let store: any;
-  const activities: ActivityType[] = [];
+const mockDispatch = jest.fn();
+jest.mock("react-redux", () => ({
+  useSelector: () => ({ activities: [] }),
+  useDispatch: () => mockDispatch,
+}));
 
+describe("ActivityList", () => {
   describe("rendering", () => {
-    store = mockStore(initialState);
     let wrapper: ShallowWrapper;
+    const activities: ActivityType[] = [
+      {
+        type: "test type",
+        url: "test url",
+        note: "test note",
+      },
+    ];
     beforeEach(() => {
-      wrapper = shallow(
-        <Provider store={store}>
-          <ActivityList activities={activities} />
-        </Provider>
-      );
+      wrapper = shallow(<ActivityList activities={activities} />);
     });
 
     it("renders the component", () => {
       expect(wrapper).toMatchSnapshot();
     });
 
-    it("renders parent component", () => {
-      expect(wrapper.find(ActivityList)).toHaveLength(1);
+    it("should have List", () => {
+      expect(wrapper.find('[data-id="list"]').length).toEqual(1);
     });
   });
 });

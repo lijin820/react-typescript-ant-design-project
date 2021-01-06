@@ -1,40 +1,82 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AddActivityModal rendering renders the component 1`] = `
-<ContextProvider
-  value={
-    Object {
-      "store": Object {
-        "clearActions": [Function],
-        "dispatch": [Function],
-        "getActions": [Function],
-        "getState": [Function],
-        "replaceReducer": [Function],
-        "subscribe": [Function],
-      },
-      "subscription": Subscription {
-        "handleChangeWrapper": [Function],
-        "listeners": Object {
-          "notify": [Function],
-        },
-        "onStateChange": [Function],
-        "parentSub": undefined,
-        "store": Object {
-          "clearActions": [Function],
-          "dispatch": [Function],
-          "getActions": [Function],
-          "getState": [Function],
-          "replaceReducer": [Function],
-          "subscribe": [Function],
-        },
-        "unsubscribe": null,
-      },
-    }
-  }
+<Modal
+  centered={true}
+  confirmLoading={false}
+  data-id="modal-container"
+  maskTransitionName="fade"
+  okText="Submit"
+  okType="primary"
+  onCancel={[Function]}
+  onOk={[Function]}
+  title="Add Activity"
+  transitionName="zoom"
+  visible={true}
+  width={520}
 >
-  <AddActivityModal
-    setVisible={[Function]}
-    visible={true}
-  />
-</ContextProvider>
+  <Space
+    direction="vertical"
+    size="large"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <ForwardRef(InternalSelect)
+      defaultValue={
+        Object {
+          "key": "note",
+          "label": "Add Note",
+          "value": "note",
+        }
+      }
+      labelInValue={true}
+      onChange={[Function]}
+      style={
+        Object {
+          "width": 150,
+        }
+      }
+    >
+      <Option
+        value="note"
+      >
+        Add Note
+      </Option>
+      <Option
+        value="enquiry"
+      >
+        Add Enquiry
+      </Option>
+      <Option
+        value="task"
+      >
+        Add Task
+      </Option>
+    </ForwardRef(InternalSelect)>
+    <Input
+      onChange={[Function]}
+      placeholder="Add Property URL (optional)"
+      style={
+        Object {
+          "width": 300,
+        }
+      }
+      type="text"
+    />
+    <ForwardRef
+      onChange={[Function]}
+      placeholder="Add notes..."
+      rows={4}
+      style={
+        Object {
+          "resize": "none",
+          "width": "100%",
+        }
+      }
+    />
+  </Space>
+</Modal>
 `;

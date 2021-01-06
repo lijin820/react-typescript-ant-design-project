@@ -1,32 +1,33 @@
 import React from "react";
 import { shallow, ShallowWrapper } from "enzyme";
-import { Provider } from "react-redux";
-import configureStore from "redux-mock-store";
 import ActivityTab from "../../components/ActivityTab";
 
-describe("ActivityTab", () => {
-  const initialState = { activities: [] };
-  const mockStore = configureStore();
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  let store: any;
+const mockDispatch = jest.fn();
+jest.mock("react-redux", () => ({
+  useSelector: () => ({ activities: [] }),
+  useDispatch: () => mockDispatch,
+}));
 
+describe("ActivityTab", () => {
   describe("rendering", () => {
-    store = mockStore(initialState);
     let wrapper: ShallowWrapper;
     beforeEach(() => {
-      wrapper = shallow(
-        <Provider store={store}>
-          <ActivityTab />
-        </Provider>
-      );
+      wrapper = shallow(<ActivityTab />);
     });
 
     it("renders the component", () => {
       expect(wrapper).toMatchSnapshot();
     });
 
-    it("renders parent component", () => {
-      expect(wrapper.find(ActivityTab)).toHaveLength(1);
+    it("should have activity modal", () => {
+      expect(wrapper.find('[data-id="add-activity-modal"]').length).toEqual(1);
+    });
+
+    it("simulate button click event", () => {
+      wrapper.find('[data-id="add-button"]').simulate("click");
+      expect(
+        wrapper.find('[data-id="add-activity-modal"]').prop("visible")
+      ).toEqual(true);
     });
   });
 });

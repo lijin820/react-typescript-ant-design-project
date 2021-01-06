@@ -25,6 +25,7 @@ function AddActivityModal({ visible, setVisible }: ModalType): ReactElement {
 
   return (
     <Modal
+      data-id="modal-container"
       title="Add Activity"
       centered
       visible={visible}
