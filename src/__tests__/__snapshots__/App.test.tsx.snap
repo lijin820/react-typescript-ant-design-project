@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the component 1`] = `
+<Layout
+  className="App"
+>
+  <Sider
+    collapsed={false}
+    collapsible={true}
+    trigger={null}
+  >
+    <div
+      className="logo"
+    />
+    <Menu
+      defaultSelectedKeys={
+        Array [
+          "1",
+        ]
+      }
+      mode="inline"
+      theme="dark"
+    >
+      <MenuItem
+        icon={<ForwardRef(UserOutlined) />}
+        key="1"
+      >
+        Overview
+      </MenuItem>
+    </Menu>
+  </Sider>
+  <Layout
+    className="site-layout"
+  >
+    <Header
+      className="site-layout-background"
+      style={
+        Object {
+          "padding": 0,
+        }
+      }
+    >
+      <ForwardRef(MenuFoldOutlined)
+        className="trigger"
+        onClick={[Function]}
+      />
+    </Header>
+    <Content
+      className="site-layout-background"
+      style={
+        Object {
+          "margin": "24px 16px",
+          "minHeight": 280,
+          "padding": 24,
+        }
+      }
+    >
+      <Tabs
+        defaultActiveKey="1"
+      >
+        <TabPane
+          key="1"
+          tab="Activity Feed"
+        >
+          <ActivityTab />
+        </TabPane>
+        <TabPane
+          key="2"
+          tab="Status"
+        >
+          Data not available
+        </TabPane>
+        <TabPane
+          key="3"
+          tab="Document"
+        >
+          Data not available
+        </TabPane>
+      </Tabs>
+    </Content>
+  </Layout>
+</Layout>
+`;
