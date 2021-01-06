@@ -14,24 +14,11 @@ module.exports = {
     "!src/index.tsx",
   ],
   setupFiles: ["./config/jest/setupJest.ts", "./config/jest/setupEnzyme.ts"],
-  coveragePathIgnorePatterns: ["./src/*/*.types.{ts,tsx}"],
-  coverageReporters: ["json", "lcov", "text-summary", "clover"],
-  coverageThreshold: {
-    global: {
-      statements: 95,
-      branches: 95,
-      lines: 95,
-      functions: 95,
-    },
-  },
   snapshotSerializers: ["enzyme-to-json/serializer"],
   testMatch: ["<rootDir>/src/**/*.test.{js,jsx,ts,tsx}"],
   automock: false,
   transform: {
     "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/ts-jest",
-    "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-    "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)":
-      "<rootDir>/config/jest/fileTransform.js",
   },
   modulePaths: [],
   moduleNameMapper: {

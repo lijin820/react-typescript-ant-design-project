@@ -6,7 +6,7 @@ export type SelectType = {
 
 export type ModalType = {
   visible: boolean;
-  setVisble: (args: boolean) => void;
+  setVisible: (args: boolean) => void;
 };
 
 export type ListType = {

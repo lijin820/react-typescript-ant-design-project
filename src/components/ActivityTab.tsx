@@ -26,7 +26,7 @@ function ActivityTab(): ReactElement {
       >
         Add new activity
       </Button>
-      <AddActivityModal visible={modalVisible} setVisble={setModalVisible} />
+      <AddActivityModal visible={modalVisible} setVisible={setModalVisible} />
       <ActivityList activities={activities} />
     </div>
   );

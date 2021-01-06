@@ -7,7 +7,7 @@ import { ADD_ACTIVITY_REQUEST } from "../redux/constants";
 const { Option } = Select;
 const { TextArea } = Input;
 
-function AddActivityModal({ visible, setVisble }: ModalType): ReactElement {
+function AddActivityModal({ visible, setVisible }: ModalType): ReactElement {
   const dispatch = useDispatch();
 
   const [type, setType] = useState<string>("note");
@@ -20,7 +20,7 @@ function AddActivityModal({ visible, setVisble }: ModalType): ReactElement {
 
   const submitValues = () => {
     dispatch({ type: ADD_ACTIVITY_REQUEST, payload: { type, url, note } });
-    setVisble(false);
+    setVisible(false);
   };
 
   return (
@@ -30,7 +30,7 @@ function AddActivityModal({ visible, setVisble }: ModalType): ReactElement {
       visible={visible}
       okText="Submit"
       onOk={submitValues}
-      onCancel={() => setVisble(false)}
+      onCancel={() => setVisible(false)}
     >
       <Space direction="vertical" size="large" style={{ width: "100%" }}>
         <Select
