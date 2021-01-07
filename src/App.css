@@ -36,3 +36,36 @@
 .site-layout .site-layout-background {
   background: #fff;
 }
+
+.avatar-container {
+  position: absolute;
+  right: 20px;
+  top: 0px;
+}
+
+.profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.custom-menu {
+  background-color: #3394fc !important;
+}
+
+.custom-menu-item {
+  color: #D1F7FB !important;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.custom-divider {
+  background-color: #55B4FF !important;
+  width: 210px;
+  min-width: 210px;
+  margin: 20px !important;
+}
+
+.ant-menu-item-group-title {
+  padding-left: 24px !important;
+}
