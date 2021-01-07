@@ -27,3 +27,7 @@ It is generating coverage status and you can check the test cover result in cove
 <div align="center">
   <img width=700 src ="https://github.com/lijin820/perchpeek-test/blob/master/screens/1.png" />
 </div>
+
+<div align="center">
+  <img width=700 src ="https://github.com/lijin820/perchpeek-test/blob/master/screens/2.png" />
+</div>
