@@ -1,10 +1,6 @@
 import React, { ReactElement, useState } from "react";
-import { Layout, Menu, Tabs } from "antd";
-import {
-  MenuUnfoldOutlined,
-  MenuFoldOutlined,
-  UserOutlined,
-} from "@ant-design/icons";
+import { Layout, Menu, Tabs, Divider } from "antd";
+import { MenuUnfoldOutlined, MenuFoldOutlined } from "@ant-design/icons";
 
 import ActivityTab from "./components/ActivityTab";
 import "./App.css";
@@ -21,11 +17,111 @@ function App(): ReactElement {
 
   return (
     <Layout className="App">
-      <Sider trigger={null} collapsible collapsed={collapsed}>
-        <div className="logo" />
-        <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
-          <Menu.Item key="1" icon={<UserOutlined />}>
+      <Sider
+        trigger={null}
+        collapsible
+        collapsed={collapsed}
+        width={250}
+        style={{ backgroundColor: "#3394fc" }}
+      >
+        <div className="logo">
+          <span>PERCHPEEK</span>
+        </div>
+        <Divider
+          style={{
+            backgroundColor: "#55B4FF",
+            width: 210,
+            minWidth: 210,
+            margin: 20,
+          }}
+        />
+        <Menu
+          theme="dark"
+          mode="inline"
+          defaultSelectedKeys={["1"]}
+          style={{ backgroundColor: "#3394fc" }}
+        >
+          <Menu.Item
+            key="1"
+            style={{
+              color: "#D1F7FB",
+              fontWeight: 500,
+              fontSize: 15,
+            }}
+          >
             Overview
+          </Menu.Item>
+          <Divider
+            style={{
+              backgroundColor: "#55B4FF",
+              width: 210,
+              minWidth: 210,
+              margin: 20,
+            }}
+          />
+          <div className="section-title">
+            <span>MANAGE</span>
+          </div>
+          <Menu.Item
+            key="2"
+            style={{
+              color: "#D1F7FB",
+              fontWeight: 500,
+              fontSize: 15,
+            }}
+          >
+            Users
+          </Menu.Item>
+          <Menu.Item
+            key="3"
+            style={{
+              color: "#D1F7FB",
+              fontWeight: 500,
+              fontSize: 15,
+            }}
+          >
+            Properties
+          </Menu.Item>
+          <Menu.Item
+            key="4"
+            style={{
+              color: "#D1F7FB",
+              fontWeight: 500,
+              fontSize: 15,
+            }}
+          >
+            Viewings
+          </Menu.Item>
+          <Menu.Item
+            key="5"
+            style={{
+              color: "#D1F7FB",
+              fontWeight: 500,
+              fontSize: 15,
+            }}
+          >
+            Support
+          </Menu.Item>
+          <Divider
+            style={{
+              backgroundColor: "#55B4FF",
+              width: 210,
+              minWidth: 210,
+              margin: 20,
+            }}
+          />
+          <div className="section-title">
+            <span>GET HELP</span>
+          </div>
+          <Menu.Item
+            key="6"
+            style={{
+              color: "#D1F7FB",
+              fontWeight: 500,
+              fontSize: 15,
+            }}
+          >
+            Knowledge Base
           </Menu.Item>
         </Menu>
       </Sider>

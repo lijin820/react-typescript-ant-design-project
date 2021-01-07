@@ -17,9 +17,20 @@
 }
 
 .logo {
-  height: 32px;
-  background: rgba(255, 255, 255, 0.3);
-  margin: 16px;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 18px;
+  color: #D1F7FB;
+  font-weight: 500;
+}
+
+.section-title {
+  font-size: 12px;
+  color: #8ED5FF;
+  font-weight: 500;
+  padding-left: 24px;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 .site-layout .site-layout-background {
