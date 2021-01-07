@@ -2,6 +2,13 @@
 
 exports[`AddActivityModal rendering renders the component 1`] = `
 <Modal
+  cancelButtonProps={
+    Object {
+      "style": Object {
+        "display": "none",
+      },
+    }
+  }
   centered={true}
   confirmLoading={false}
   data-id="modal-container"

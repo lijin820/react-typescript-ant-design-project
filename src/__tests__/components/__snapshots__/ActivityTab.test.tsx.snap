@@ -2,14 +2,26 @@
 
 exports[`ActivityTab rendering renders the component 1`] = `
 <div>
-  <Button
+  <button
+    className="create-activity-btn"
     data-id="add-button"
-    icon={<ForwardRef(PlusOutlined) />}
     onClick={[Function]}
-    type="primary"
+    type="button"
   >
-    Add new activity
-  </Button>
+    <ForwardRef(PlusCircleFilled)
+      style={
+        Object {
+          "color": "#4994FF",
+          "fontSize": 22,
+        }
+      }
+    />
+    <span
+      className="activity-text"
+    >
+      Add new activity
+    </span>
+  </button>
   <AddActivityModal
     data-id="add-activity-modal"
     setVisible={[Function]}

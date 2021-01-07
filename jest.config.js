@@ -26,6 +26,8 @@ module.exports = {
     "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy",
     "src/(.*)$": "<rootDir>/src/$1",
     "\\.(css|less)$": "<rootDir>/config/__mocks__/styleMock.js",
+    "\\.(png|jpg|jpeg|gif|ttf|eot|svg)$":
+      "<rootDir>/config/__mocks__/fileMock.js",
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
 };

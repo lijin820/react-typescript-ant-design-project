@@ -5,14 +5,23 @@ exports[`renders the component 1`] = `
   className="App"
 >
   <Sider
-    collapsed={false}
-    collapsible={true}
+    style={
+      Object {
+        "backgroundColor": "#3394fc",
+      }
+    }
     trigger={null}
+    width={250}
   >
     <div
       className="logo"
-    />
+    >
+      <span>
+        PERCHPEEK
+      </span>
+    </div>
     <Menu
+      className="custom-menu"
       defaultSelectedKeys={
         Array [
           "1",
@@ -21,12 +30,67 @@ exports[`renders the component 1`] = `
       mode="inline"
       theme="dark"
     >
+      <Divider
+        className="custom-divider"
+        disabled={true}
+        style={Object {}}
+      />
       <MenuItem
-        icon={<ForwardRef(UserOutlined) />}
+        className="custom-menu-item"
         key="1"
       >
         Overview
       </MenuItem>
+      <Divider
+        className="custom-divider"
+        disabled={true}
+        style={Object {}}
+      />
+      <MenuItemGroup
+        disabled={true}
+        title="MANAGE"
+      >
+        <MenuItem
+          className="custom-menu-item"
+          key="2"
+        >
+          Users
+        </MenuItem>
+        <MenuItem
+          className="custom-menu-item"
+          key="3"
+        >
+          Properties
+        </MenuItem>
+        <MenuItem
+          className="custom-menu-item"
+          key="4"
+        >
+          Viewings
+        </MenuItem>
+        <MenuItem
+          className="custom-menu-item"
+          key="5"
+        >
+          Support
+        </MenuItem>
+      </MenuItemGroup>
+      <Divider
+        className="custom-divider"
+        disabled={true}
+        style={Object {}}
+      />
+      <MenuItemGroup
+        disabled={true}
+        title="GET HELP"
+      >
+        <MenuItem
+          className="custom-menu-item"
+          key="6"
+        >
+          Knowledge Base
+        </MenuItem>
+      </MenuItemGroup>
     </Menu>
   </Sider>
   <Layout
@@ -40,10 +104,28 @@ exports[`renders the component 1`] = `
         }
       }
     >
-      <ForwardRef(MenuFoldOutlined)
-        className="trigger"
-        onClick={[Function]}
+      <Input
+        placeholder="Search..."
+        prefix={<ForwardRef(SearchOutlined) />}
+        size="large"
+        style={
+          Object {
+            "border": "none",
+            "marginLeft": 16,
+            "width": "50%",
+          }
+        }
+        type="text"
       />
+      <div
+        className="avatar-container"
+      >
+        <img
+          alt="avatar"
+          className="profile-image"
+          src={Object {}}
+        />
+      </div>
     </Header>
     <Content
       className="site-layout-background"
@@ -55,10 +137,58 @@ exports[`renders the component 1`] = `
         }
       }
     >
+      <div
+        className="full-name"
+      >
+        <span>
+          John Doe
+        </span>
+      </div>
+      <div
+        className="select-section"
+      >
+        <div>
+          <img
+            alt="customer"
+            className="user-image"
+            src={Object {}}
+          />
+        </div>
+        <div
+          className="location-view"
+        >
+          <span
+            className="normal-text"
+          >
+            Moving to
+          </span>
+          <span
+            className="location-text"
+          >
+            Berlin, Germany
+          </span>
+        </div>
+        <div
+          className="dropdown-view"
+        >
+          <ForwardRef(DownCircleFilled)
+            style={
+              Object {
+                "color": "#4C99F9",
+                "fontSize": 20,
+              }
+            }
+          />
+        </div>
+      </div>
       <Tabs
+        animated={false}
         defaultActiveKey="1"
+        size="large"
+        tabBarGutter={60}
       >
         <TabPane
+          className="custom-tab-pane"
           key="1"
           tab="Activity Feed"
         >

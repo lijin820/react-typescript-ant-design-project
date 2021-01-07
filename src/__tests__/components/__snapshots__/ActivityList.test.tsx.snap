@@ -16,7 +16,9 @@ exports[`ActivityList rendering renders the component 1`] = `
   renderItem={[Function]}
   style={
     Object {
+      "height": 300,
       "marginTop": 20,
+      "overflowY": "auto",
     }
   }
 />
