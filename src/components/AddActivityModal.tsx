@@ -11,8 +11,8 @@ function AddActivityModal({ visible, setVisible }: ModalType): ReactElement {
   const dispatch = useDispatch();
 
   const [type, setType] = useState<string>("note");
-  const [url, setUrl] = useState<string>();
-  const [note, setNote] = useState<string>();
+  const [url, setUrl] = useState<string>("");
+  const [note, setNote] = useState<string>("");
 
   const handleChange = (value: SelectType) => {
     setType(value.value);
@@ -22,7 +22,7 @@ function AddActivityModal({ visible, setVisible }: ModalType): ReactElement {
     if (note) {
       dispatch({ type: ADD_ACTIVITY_REQUEST, payload: { type, url, note } });
       setVisible(false);
-      setNote("''");
+      setNote("");
       setUrl("");
     }
   };
@@ -54,6 +54,7 @@ function AddActivityModal({ visible, setVisible }: ModalType): ReactElement {
           data-id="property-input"
           placeholder="Add Property URL (optional)"
           style={{ width: 300 }}
+          value={url}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
             setUrl(e.target.value)
           }
@@ -63,6 +64,7 @@ function AddActivityModal({ visible, setVisible }: ModalType): ReactElement {
           rows={4}
           placeholder="Add notes..."
           style={{ width: "100%", resize: "none" }}
+          value={note}
           onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
             setNote(e.target.value)
           }

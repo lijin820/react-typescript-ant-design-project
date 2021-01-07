@@ -11,7 +11,7 @@ function ActivityList({ activities }: ListType): ReactElement {
   return (
     <List
       data-id="list"
-      style={{ marginTop: 20, height: 300, overflowY: "auto" }}
+      style={{ marginTop: 20, maxHeight: 300, overflowY: "auto" }}
       bordered
       dataSource={activities}
       renderItem={(item) => {
