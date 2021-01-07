@@ -1,10 +1,12 @@
 import React, { ReactElement } from "react";
 import { Layout, Menu, Tabs, Input } from "antd";
-import { SearchOutlined } from "@ant-design/icons";
+import { DownCircleFilled, SearchOutlined } from "@ant-design/icons";
 
 import ActivityTab from "./components/ActivityTab";
 
 import richard from "./assets/images/richard.jpg";
+import john from "./assets/images/john.jpeg";
+
 import "./App.css";
 
 const { Header, Sider, Content } = Layout;
@@ -74,6 +76,21 @@ function App(): ReactElement {
             minHeight: 280,
           }}
         >
+          <div className="full-name">
+            <span>John Doe</span>
+          </div>
+          <div className="select-section">
+            <div>
+              <img src={john} alt="customer" className="user-image" />
+            </div>
+            <div className="location-view">
+              <span className="normal-text">Moving to</span>
+              <span className="location-text">Berlin, Germany</span>
+            </div>
+            <div className="dropdown-view">
+              <DownCircleFilled style={{ fontSize: 20, color: "#4C99F9" }} />
+            </div>
+          </div>
           <Tabs defaultActiveKey="1">
             <TabPane tab="Activity Feed" key="1">
               <ActivityTab />

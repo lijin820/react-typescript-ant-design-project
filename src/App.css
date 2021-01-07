@@ -69,3 +69,50 @@
 .ant-menu-item-group-title {
   padding-left: 24px !important;
 }
+
+.full-name {
+  font-size: 26px;
+  font-weight: bold;
+  color: black;
+}
+
+.select-section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  position: relative;
+}
+
+.user-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.location-view {
+  margin-left: 20px;
+}
+
+.normal-text {
+  font-size: 15px;
+  color: gray;
+  font-weight: 500;
+}
+
+.location-text {
+  font-size: 15px;
+  color: #6096D5;
+  margin-left: 5px;
+  font-weight: 500;
+}
+
+.dropdown-view {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
