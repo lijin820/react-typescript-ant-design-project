@@ -78,7 +78,7 @@
 
 .select-section {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -115,4 +115,48 @@
   position: absolute;
   right: 20px;
   cursor: pointer;
+}
+
+.custom-tab-pane {
+  font-size: 16px !important;
+}
+
+.ant-tabs-tab-btn {
+  font-size: 20px;
+}
+
+.create-activity-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: none;
+  background: white;
+  outline: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.activity-text {
+  font-size: 15px;
+  color: black;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.ant-modal-header {
+  background: #FF615E;
+}
+
+.ant-modal-title {
+  color: white;
+}
+
+.ant-modal-close {
+  color: white;
+}
+
+.ant-modal-footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
 }

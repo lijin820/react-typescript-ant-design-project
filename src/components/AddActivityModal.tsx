@@ -19,8 +19,12 @@ function AddActivityModal({ visible, setVisible }: ModalType): ReactElement {
   };
 
   const submitValues = () => {
-    dispatch({ type: ADD_ACTIVITY_REQUEST, payload: { type, url, note } });
-    setVisible(false);
+    if (note) {
+      dispatch({ type: ADD_ACTIVITY_REQUEST, payload: { type, url, note } });
+      setVisible(false);
+      setNote("''");
+      setUrl("");
+    }
   };
 
   return (
@@ -31,6 +35,7 @@ function AddActivityModal({ visible, setVisible }: ModalType): ReactElement {
       visible={visible}
       okText="Submit"
       onOk={submitValues}
+      cancelButtonProps={{ style: { display: "none" } }}
       onCancel={() => setVisible(false)}
     >
       <Space direction="vertical" size="large" style={{ width: "100%" }}>

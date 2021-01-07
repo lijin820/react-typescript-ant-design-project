@@ -91,8 +91,13 @@ function App(): ReactElement {
               <DownCircleFilled style={{ fontSize: 20, color: "#4C99F9" }} />
             </div>
           </div>
-          <Tabs defaultActiveKey="1">
-            <TabPane tab="Activity Feed" key="1">
+          <Tabs
+            defaultActiveKey="1"
+            size="large"
+            animated={false}
+            tabBarGutter={60}
+          >
+            <TabPane tab="Activity Feed" key="1" className="custom-tab-pane">
               <ActivityTab />
             </TabPane>
             <TabPane tab="Status" key="2">
