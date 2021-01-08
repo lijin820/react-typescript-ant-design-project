@@ -74,6 +74,7 @@ exports[`AddActivityModal rendering renders the component 1`] = `
         }
       }
       type="text"
+      value=""
     />
     <ForwardRef
       data-id="note-input"
@@ -86,6 +87,7 @@ exports[`AddActivityModal rendering renders the component 1`] = `
           "width": "100%",
         }
       }
+      value=""
     />
   </Space>
 </Modal>
