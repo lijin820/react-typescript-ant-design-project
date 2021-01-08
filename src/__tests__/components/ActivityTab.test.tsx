@@ -8,6 +8,8 @@ jest.mock("react-redux", () => ({
   useDispatch: () => mockDispatch,
 }));
 
+jest.spyOn(React, "useEffect").mockImplementation((f) => f());
+
 describe("ActivityTab", () => {
   describe("rendering", () => {
     let wrapper: ShallowWrapper;
