@@ -1,4 +1,4 @@
-# Perchpeek Test Project
+# React + Typescript + Ant Design + Redux boilerplate
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
